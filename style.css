@@ -1,0 +1,14 @@
+/* Custom styles for dark mode (already included in HTML previously) */
+.dark-mode {
+    background-color: #181818;
+    color: #f1f1f1;
+  }
+  
+  .dark-mode .bg-white {
+    background-color: #282828;
+  }
+  
+  .dark-mode .text-gray-700 {
+    color: #b3b3b3;
+  }
+  

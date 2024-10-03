@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone 2024</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="bg-white dark-mode:bg-gray-900 p-4 shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo and Search -->
+      <div class="flex items-center space-x-4">
+        <div class="text-3xl font-bold text-red-600">YouTube</div>
+        <input type="text" placeholder="Search" class="hidden md:block px-4 py-2 border rounded-lg w-96">
+        <button class="hidden md:block px-4 py-2 bg-gray-200 rounded-lg">Search</button>
+      </div>
+      <!-- Right Side Icons -->
+      <div class="flex items-center space-x-4">
+        <button class="px-4 py-2 bg-blue-500 text-white rounded-lg">Sign In</button>
+        <button id="toggleDarkMode" class="px-4 py-2 bg-gray-200 rounded-lg">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto flex mt-20">
+    <!-- Sidebar -->
+    <aside class="w-1/6 p-4 bg-white dark-mode:bg-gray-900 shadow-md rounded-lg hidden md:block">
+      <ul class="space-y-4">
+        <li><a href="#" class="flex items-center space-x-3 text-gray-700"><span>🏠</span><span>Home</span></a></li>
+        <li><a href="#" class="flex items-center space-x-3 text-gray-700"><span>🔥</span><span>Trending</span></a></li>
+        <li><a href="#" class="flex items-center space-x-3 text-gray-700"><span>📺</span><span>Subscriptions</span></a></li>
+        <li><a href="#" class="flex items-center space-x-3 text-gray-700"><span>📚</span><span>Library</span></a></li>
+        <li><a href="#" class="flex items-center space-x-3 text-gray-700"><span>⏳</span><span>History</span></a></li>
+      </ul>
+    </aside>
+
+    <!-- Video Grid -->
+    <main class="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+      <!-- Video Card -->
+      <div class="bg-white dark-mode:bg-gray-800 shadow-md rounded-lg overflow-hidden video-card">
+        <img src="https://via.placeholder.com/300" alt="Video Thumbnail" class="w-full">
+        <div class="p-4">
+          <h3 class="text-lg font-semibold">Sample Video Title</h3>
+          <p class="text-gray-600 text-sm dark-mode:text-gray-400">Channel Name • 1M views • 2 days ago</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Video Player -->
+  <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
+    <div class="relative bg-white dark-mode:bg-gray-900 p-6 rounded-lg">
+      <button id="closeModal" class="absolute top-2 right-2 text-black dark-mode:text-white">X</button>
+      <video controls autoplay class="w-full h-64">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
